@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+</head>
+<body style="background-color: gray;">
+    
+    <fieldset>
+        <legend>Legend is for heading of fieldset within border</legend>
+        <form>
+            <label for="name">Enter your name:- </label>
+            <input type="text" id="name" placeholder="Full Name">
+            <br>
+            <br>
+    
+            <label for="radio">Gender : </label>
+            <input type="radio" name="gender"  id="radio1">
+            <label for="radio1">male</label>
+            <input type="radio" name="gender" id="radio2">
+            <label for="radio2">female</label>
+            <br>
+            <br>
+    
+            <label>Language : </label>
+    
+            <input type="checkbox" id="box1">
+            <label for="box1">English</label>
+    
+            <input type="checkbox" id="box2">
+            <label for="box2">Hindi</label>
+    
+            <input type="checkbox" id="box3">
+            <label for="box3">Spanish</label>
+    
+            <br>
+            <br>
+            <label for="dob">Enter date of Birth: </label>
+            <input type="date" id="dob">
+            <br/>
+    
+            <!-- <button>Submit</button> -->
+            <input type="submit" value="Submit">
+    
+            <br/>
+            <br/>
+    
+            <!-- Selector used for dropdown-->
+            <p>This is the selector it is a dropdown for pick one things</p>
+            <label for="selector1">Choose your things: </label>
+             <select name="dishes" id="selector1">
+                <option value="magie">Maggie</option>
+                <option value="water">Bisilary</option>
+                <option value="chips">Chips</option>
+                <option value="gudday">Gudday</option>
+             </select>
+             <br/>
+             <br/>
+            <!-- This is text area in this we can take the feedback in big container as a input -->
+            <textarea name="text1" id="text1" cols="50" rows="10" placeholder="Enter jo man wo..."></textarea>
+    
+            <!-- File selector -->
+             <legend for="fileselector1">Upload file: </legend>
+             <input type="file" name="fileselector1" id="fileselector1">
+             <br/>
+             <button>Upload</button>
+        </form>
+    </fieldset>
+
+</body>
+</html>
