@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #content {
+            font-size: 20px;
+            color: blue;
+            transition: all 0.5s ease; 
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic HTML (DHTML) Example</h1>
+    <div id="content">Hello, this is a DHTML example!</div>
+    <button onclick="changeContent()">Click Me!</button>
+
+    <script>
+        // JavaScript to change content and style dynamically
+        function changeContent() {
+            var contentDiv = document.getElementById("content");
+            contentDiv.innerHTML = "The content has been changed dynamically!";
+            contentDiv.style.color = "red";
+            contentDiv.style.fontSize = "24px";
+            contentDiv.style.fontWeight = "bold";
+        }
+    </script>
+</body>
+</html>
