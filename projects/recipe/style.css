@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 10px;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: none;
+    background-image: linear-gradient(62deg, #efefef 0%, #c3cefc 50%, #ffffff 100%);
+}
+.nav{
+    width: 100%;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+body{
+    position: relative;
+}
+
+.navContainer{
+    width: 100%;
+    /* background-color: rgb(116, 182, 160); */
+    background-color: #0016e9;
+    background-image: linear-gradient(160deg, #0016e9 0%, #c7e3e0 100%);
+    
+
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+#navList{
+    width: 100%;
+    padding: 15px;
+    list-style: none;
+    font-size: 3.8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo{
+    font-size: 4.5vh;
+    color:azure;
+    
+}
+a{
+    text-decoration: none;
+    color: azure;
+}
+
+#navItem{
+    display: flex;
+    gap: 40px;
+}
+
+.contentBox{
+    width: 50%;
+    margin: auto;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px black;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.item{
+    display: flex;
+    justify-content: space-around;
+}
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.leftBox h2{
+    font-size: 2rem;
+}
+.ingBox{
+    font-size: 1.2rem;
+}
+.recpieBox{
+    font-size: 1.1rem;
+}
+
+.rightBox{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px black;
+    border-radius: 20px;
+    transition: all 0.2s linear 0s ;
+    height: 300px;
+    width: 220px;
+}
+
+.rightBox .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(222, 209, 209, 0.626);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.2s linear 0s ;
+
+}
+
+.rightBox:hover .overlay{
+    opacity: 1;
+}
+.rightBox .overlay .span{
+    color: white;
+    font-size: 1.2rem;
+}
+.rightBox img{
+    border-radius: 20px;
+    transition: all 0.2s linear 0s ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rightBox:hover{
+    transform:scale(1.1);
+
+}
+
+.footerbox{
+    width: 100%;
+    min-height: 40px;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0016e9 0%, #c7e3e0 100%);
+
+    color: azure;
+}
+footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width:900px){
+    .container{
+        background-color: green;
+    }
+    .contentBox{
+        width: 100%;
+    }
+}
