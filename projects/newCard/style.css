@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+}
+.card{
+    width: 700px;
+    height: 400px;
+    border-radius: 40px 0px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(0,16,62); */
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    color: white;
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px #eee;
+    background-size: 200% auto;
+    background-position: right center;
+
+}
+
+.card:hover{
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    background-position: left center;
+    text-decoration: none;
+    transform:scale(1.04);
+    color: white;
+}
+.leftBox{
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+.header{
+    font-weight: bold;
+}
+.review{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rightBox{
+    height: 100%;
+    width: 50%;
+}
+
+.rightBox img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius:40px 0px;
+}
+.item1,.item2,.item3{
+    position: relative;
+    transition: all 0.5s linear 0s;
+    cursor: pointer;
+}
+.item1:hover::after,.item2:hover::after,.item3:hover::after {
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #01195e;
+    display: block;
+    animation: line-animation ease-in 0.5s;
+    border-radius: 0px 5px 5px 0px;
+}
+@keyframes line-animation{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .card {
+        flex-direction: column;
+        height: auto;
+    }
+    .leftBox{
+        gap: 10px;
+    }
+    .rightBox {
+        order: -1; 
+        width: 100%;
+        height: auto;
+    }
+    .rightBox img {
+        height: auto;
+        width: 100%;
+    }
+    .leftBox {
+        width: 100%;
+    }
+}
